@@ -1,0 +1,33 @@
+{
+  "name": "validity-validation-group",
+  "description": "Validate using all the validators in a group.",
+  "version": "1.0.0",
+  "main": "validator.js",
+  "scripts": {
+    "lint": "jshint .",
+    "checkStyle": "jscs .",
+    "pretest": "npm run-script lint && npm run-script checkStyle",
+    "test": "istanbul cover _mocha test",
+    "posttest": "istanbul check-coverage && rm -rf coverage",
+    "prepublish": "npm test && npm prune"
+  },
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org"
+  },
+  "author": "Paul Serb <paul@serby.net>",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^1.4.2"
+  },
+  "devDependencies": {
+    "istanbul": "^0.3.18",
+    "jscs": "^2.1.1",
+    "jshint": "^2.8.0",
+    "mocha": "^2.2.5",
+    "validity": "^0.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:serby/validity-validation-group"
+  }
+}
