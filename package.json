@@ -1,7 +1,7 @@
 {
   "name": "validity-validation-group",
   "description": "Validate using all the validators in a group.",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "main": "validator.js",
   "scripts": {
     "lint": "jshint .",
