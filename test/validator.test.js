@@ -3,7 +3,6 @@ var createValidator = require('..')
   , assert = require('assert')
 
 describe('validity-validator-group', function () {
-
   it('should throw array is not passed', function () {
     assert.throws(function () {
       createValidator()
@@ -15,10 +14,12 @@ describe('validity-validator-group', function () {
       { property: 'value'
       , secondProperty: ''
       }
+
     createValidator([])('secondProperty'
       , 'Second Property'
       , obj
       , function (err, message) {
+          assert.equal(err, null)
           assert.equal(undefined, message)
           done()
         }
@@ -33,6 +34,7 @@ describe('validity-validator-group', function () {
       , 'Second Property'
       , obj
       , function (err, message) {
+          assert.equal(err, null)
           assert.equal('Second Property is required', message)
           done()
         }
@@ -48,6 +50,7 @@ describe('validity-validator-group', function () {
       , 'Second Property'
       , obj
       , function (err, message) {
+          assert.equal(err, null)
           assert.equal('Second Property must be an integer', message)
           done()
         }
@@ -63,10 +66,10 @@ describe('validity-validator-group', function () {
       , 'Second Property'
       , obj
       , function (err, message) {
+          assert.equal(err, null)
           assert.equal(undefined, message)
           done()
         }
     )
   })
-
 })
