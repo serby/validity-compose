@@ -13,7 +13,7 @@
   "publishConfig": {
     "registry": "http://registry.npmjs.org"
   },
-  "author": "Paul Serb <paul@serby.net>",
+  "author": "Paul Serby <paul@serby.net>",
   "license": "ISC",
   "dependencies": {
     "async": "^3.0.0"
