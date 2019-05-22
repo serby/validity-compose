@@ -1,7 +1,7 @@
 {
   "name": "validity-compose",
   "description": "Compose a number of validators together to use as one",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "validator.js",
   "scripts": {
     "lint": "eslint -f unix .",
