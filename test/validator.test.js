@@ -1,12 +1,15 @@
 var createValidator = require('..')
-  , validity = require('validity')
+  , required = require('validity-required')
+  , integer = require('validity-integer')
   , assert = require('assert')
 
 describe('validity-validator-group', function () {
   it('should throw array is not passed', function () {
     assert.throws(function () {
       createValidator()
-    }, 'Array expected')
+    }, { name: 'TypeError'
+      , message: 'Array expected'
+      })
   })
 
   it('should validate with empty array', function (done) {
@@ -19,10 +22,10 @@ describe('validity-validator-group', function () {
       , 'Second Property'
       , obj
       , function (err, message) {
-          assert.equal(err, null)
-          assert.equal(undefined, message)
-          done()
-        }
+        assert.equal(err, null)
+        assert.equal(undefined, message)
+        done()
+      }
     )
   })
 
@@ -30,14 +33,14 @@ describe('validity-validator-group', function () {
     var obj =
       { property: 'value'
       }
-    createValidator([ validity.required ])('secondProperty'
+    createValidator([ required ])('secondProperty'
       , 'Second Property'
       , obj
       , function (err, message) {
-          assert.equal(err, null)
-          assert.equal('Second Property is required', message)
-          done()
-        }
+        assert.equal(err, null)
+        assert.equal('Second Property is required', message)
+        done()
+      }
     )
   })
 
@@ -46,14 +49,14 @@ describe('validity-validator-group', function () {
       { property: 'value'
       , secondProperty: 'Hello'
       }
-    createValidator([ validity.required, validity.integer ])('secondProperty'
+    createValidator([ required, integer ])('secondProperty'
       , 'Second Property'
       , obj
       , function (err, message) {
-          assert.equal(err, null)
-          assert.equal('Second Property must be an integer', message)
-          done()
-        }
+        assert.equal(err, null)
+        assert.equal('Second Property must be an integer', message)
+        done()
+      }
     )
   })
 
@@ -62,14 +65,14 @@ describe('validity-validator-group', function () {
       { property: 'value'
       , secondProperty: 1
       }
-    createValidator([ validity.required, validity.integer ])('secondProperty'
+    createValidator([ required, integer ])('secondProperty'
       , 'Second Property'
       , obj
       , function (err, message) {
-          assert.equal(err, null)
-          assert.equal(undefined, message)
-          done()
-        }
+        assert.equal(err, null)
+        assert.equal(undefined, message)
+        done()
+      }
     )
   })
 })
