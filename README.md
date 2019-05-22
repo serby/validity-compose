@@ -1,12 +1,14 @@
-# validity-validation-group
+# validity-compose
 
-Chain a number of validators together and call as a single validator. This is
+Compose a number of validators together and call as a single validator. This is
 useful when used with a conditional validator.
+
+This used to be called `validity-validation-group`
 
 ## Installation
 
 ```
-npm install --save validity-validation-group
+npm install --save validity-compose
 ```
 
 ## Usage
@@ -16,7 +18,7 @@ Below is a simple example for usage with schemata and save:
 ``` js
 var validity = require('validity')
   , schemata = require('schemata')
-  , validationGroup = require('validity-validation-group')
+  , compose = require('validity-compose')
 
 var schema = schemata(
     { type:
@@ -24,7 +26,7 @@ var schema = schemata(
       }
     , url:
       { type: String
-      , validators: { all: [ validateIfPropertyIn('type', ['a', 'b'], validationGroup([ validity.required, validity.url ]) ] }
+      , validators: { all: [ validateIfPropertyIn('type', ['a', 'b'], compose([ validity.required, validity.url ]) ] }
       }
     })
 ```

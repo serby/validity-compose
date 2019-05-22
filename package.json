@@ -1,5 +1,5 @@
 {
-  "name": "validity-validation-group",
+  "name": "validity-compose",
   "description": "Validate using all the validators in a group.",
   "version": "1.0.0",
   "main": "validator.js",
@@ -26,6 +26,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:serby/validity-validation-group"
+    "url": "git@github.com:serby/validity-compose"
   }
 }
