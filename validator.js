@@ -1,6 +1,6 @@
 var async = require('async')
 
-module.exports = function validateValidatorGroup (validators) {
+module.exports = function compose (validators) {
   if (!Array.isArray(validators)) {
     throw new TypeError('Array expected')
   }
