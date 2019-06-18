@@ -75,4 +75,22 @@ describe('validity-validator-group', function () {
       }
     )
   })
+
+  it('should stop on error', function (done) {
+    var obj =
+      { property: 'value'
+      , secondProperty: 1
+      }
+
+    const errorValidator = (propertyName, readablePropertyName, object, callback) => callback(new Error('This is broken'))
+    createValidator([ required, errorValidator, integer ])('secondProperty'
+      , 'Second Property'
+      , obj
+      , function (err, message) {
+        assert.equal(err.message, 'This is broken')
+        assert.equal(undefined, message)
+        done()
+      }
+    )
+  })
 })

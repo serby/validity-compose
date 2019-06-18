@@ -1,4 +1,4 @@
-var async = require('async')
+var eachSeries = require('async-each-series')
 
 module.exports = function compose (validators) {
   if (!Array.isArray(validators)) {
@@ -6,7 +6,7 @@ module.exports = function compose (validators) {
   }
 
   return function (key, msg, object, cb) {
-    async.eachSeries(validators, function (validator, callback) {
+    eachSeries(validators, function (validator, callback) {
       validator(key, msg, object, function (err, result) {
         if (err) return cb(err)
         if (result) return cb(null, result)
