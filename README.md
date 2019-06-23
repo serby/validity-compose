@@ -1,5 +1,7 @@
 # validity-compose
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/serby/validity-compose.svg)](https://greenkeeper.io/)
+
 Compose a number of validators together and call as a single validator. This is
 useful when used with a conditional validator.
 
