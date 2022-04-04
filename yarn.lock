@@ -90,6 +90,25 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
+"@clocklimited/validity-integer@^1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@clocklimited/validity-integer/-/validity-integer-1.2.1.tgz#958f893139d36a02499b0f47294c9ed9abf07ede"
+  integrity sha512-n+YDBUldUin+B0IdWQW+QQJCR4MUR/nOySDC32CN+4uekJvr8dCHS+Tab/MhECrIq48truA7HE4YxeETOJzilQ==
+  dependencies:
+    "@clocklimited/validity" "^1.1.3"
+
+"@clocklimited/validity-required@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@clocklimited/validity-required/-/validity-required-1.0.2.tgz#dba6a82cbabd3e85617baab5fbfbad10ec943e3d"
+  integrity sha512-+kQVxltBIPD+Apz0n2b6dnnDatLT00vuAmhs5WuOTREfR6QURUUf4XCnelahm0+1mPIWkt74kpL1ttS4dDd8KA==
+  dependencies:
+    "@clocklimited/validity" "^1.1.3"
+
+"@clocklimited/validity@^1.1.3":
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/@clocklimited/validity/-/validity-1.1.3.tgz#2a5f66e669366a47f222941656cfdc1547ad34cd"
+  integrity sha512-ZsJVWs9m6FNN7n3BnmHJLPsUfjSwTCSLNTf/2qEbPu6LSdz/+i+Qg0zD2XYX13RgittsQGze/gtTPayfsNQkMg==
+
 abbrev@1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
@@ -2271,25 +2290,6 @@ validate-npm-package-license@^3.0.1:
   dependencies:
     spdx-correct "^3.0.0"
     spdx-expression-parse "^3.0.0"
-
-validity-integer@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/validity-integer/-/validity-integer-1.2.0.tgz#b182d7524df6ced22d0159ef2833262e09cad56b"
-  integrity sha1-sYLXUk32ztItAVnvKDMmLgnK1Ws=
-  dependencies:
-    validity "^1.1.0"
-
-validity-required@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/validity-required/-/validity-required-1.0.0.tgz#75b5718245c574278e118909a4b3e178a9ac62f5"
-  integrity sha1-dbVxgkXFdCeOEYkJpLPheKmsYvU=
-  dependencies:
-    validity "^1.0.0"
-
-validity@^1.0.0, validity@^1.1.0, validity@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/validity/-/validity-1.1.1.tgz#24be363f90f4604ed00f782b962de4e64ffb4753"
-  integrity sha512-Nz2rNFL6qgU/AWbetft8xSn9juoOU4zIMSYmfeXAA2AGKm69pRCImayGVOCax0hZlglQwBNMUc/ihWmFN43A0w==
 
 which-module@^2.0.0:
   version "2.0.0"
