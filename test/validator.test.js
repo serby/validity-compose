@@ -1,6 +1,6 @@
 var createValidator = require('..')
-  , required = require('validity-required')
-  , integer = require('validity-integer')
+  , required = require('@clocklimited/validity-required')
+  , integer = require('@clocklimited/validity-integer')
   , assert = require('assert')
 
 describe('validity-validator-group', function () {

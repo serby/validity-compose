@@ -8,7 +8,7 @@ This used to be called `validity-validation-group`
 ## Installation
 
 ```
-npm install --save validity-compose
+npm install --save @clocklimited/validity-compose
 ```
 
 ## Usage
@@ -16,9 +16,9 @@ npm install --save validity-compose
 Below is a simple example for usage with schemata and save:
 
 ``` js
-var validity = require('validity')
+var validity = require('@clocklimited/validity')
   , schemata = require('schemata')
-  , compose = require('validity-compose')
+  , compose = require('@clocklimited/validity-compose')
 
 var schema = schemata(
     { type:
